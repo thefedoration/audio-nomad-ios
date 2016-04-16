@@ -26,12 +26,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.rootViewController = initialViewController
         self.window?.makeKeyAndVisible()
     }
-    
+ 
+    func transitionToLoginViewController() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let initialViewController = storyboard.instantiateViewControllerWithIdentifier("LoginViewController")
+        self.window?.rootViewController = initialViewController
+        self.window?.makeKeyAndVisible()
+    }
+
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-       
-        transitionToMainViewController()
+
+        // check if logged in, will handle the transitions after
+        var delegate: AMZNGetAccessTokenDelegate = AMZNGetAccessTokenDelegate()
+        var requestScopes: [AnyObject] = ["profile", "postal_code"]
+        AIMobileLib.getAccessTokenForScopes(requestScopes, withOverrideParams: nil, delegate: delegate)
 
         return true
     }
