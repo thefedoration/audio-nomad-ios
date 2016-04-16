@@ -36,29 +36,47 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yRu-Yc-b9x">
-                                <rect key="frame" x="285" y="285" width="30" height="30"/>
-                                <state key="normal" title="go"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jxQ-5Y-cSn">
+                                <rect key="frame" x="40" y="275" width="520" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yRu-Yc-b9x">
+                                <rect key="frame" x="235" y="285" width="160" height="30"/>
+                                <state key="normal" title="Find an audio book"/>
                                 <connections>
                                     <segue destination="5rb-sq-aOn" kind="push" identifier="goToUploadPhotoScreen" id="9v3-i0-ZeW"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ga3-TR-KzT">
-                                <rect key="frame" x="25" y="88" width="44" height="30"/>
-                                <state key="normal" title="logout"/>
-                                <connections>
-                                    <action selector="logoutButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="r38-yw-pNy"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="yRu-Yc-b9x" firstAttribute="top" secondItem="jxQ-5Y-cSn" secondAttribute="bottom" constant="10" id="AeV-mV-QK5"/>
+                            <constraint firstItem="jxQ-5Y-cSn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EpB-jI-ObF"/>
                             <constraint firstItem="yRu-Yc-b9x" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MTG-PS-x1Q"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jxQ-5Y-cSn" secondAttribute="trailing" constant="20" id="MYK-oo-DQP"/>
                             <constraint firstItem="yRu-Yc-b9x" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="NfM-Fl-BDZ"/>
+                            <constraint firstItem="jxQ-5Y-cSn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="gIV-NR-0Qa"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Audible Nomad" id="2MN-kt-QXr"/>
+                    <navigationItem key="navigationItem" title="Audible Nomad" id="2MN-kt-QXr">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="xsS-LP-g5p">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Ga3-TR-KzT">
+                                <rect key="frame" x="20" y="7" width="44" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="logout"/>
+                                <connections>
+                                    <action selector="logoutButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="r38-yw-pNy"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+                    <connections>
+                        <outlet property="actionButton" destination="yRu-Yc-b9x" id="qa2-Sf-Hzy"/>
+                        <outlet property="infoLabel" destination="jxQ-5Y-cSn" id="54V-st-pAs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -76,47 +94,83 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Y5-wG-4WW">
-                                <rect key="frame" x="262" y="371" width="76" height="36"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Y5-wG-4WW">
+                                <rect key="frame" x="262" y="372" width="76" height="36"/>
                                 <state key="normal" image="btnLWA_Gold_77x36"/>
                                 <connections>
                                     <action selector="onLoginButtonClicked:" destination="CR0-Ky-PgU" eventType="touchUpInside" id="79T-Oy-h5J"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uWz-W3-LQo">
-                                <rect key="frame" x="40" y="250" width="520" height="101"/>
-                                <string key="text">Audible Nomad is the app for users who listen to audio books on audible but also read real books too. By uploading a picture of what you are currently reading it can find the audio-book on Audible and play it at the place where you left off. Login to be able to seamlessly transition from reading to listening.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Audible Nomad" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BCJ-ip-2hH">
+                                <rect key="frame" x="20" y="114" width="560" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Audible Nomad" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BCJ-ip-2hH">
-                                <rect key="frame" x="40" y="194" width="520" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uWz-W3-LQo">
+                                <rect key="frame" x="20" y="265" width="560" height="72"/>
+                                <string key="text">Audible Nomad is the app for users who listen to audio books on audible but also read paper books as well. By uploading a picture of what you are currently reading it can find the audio-book on Audible and play it at the place where you left off. Login to be able to seamlessly transition from reading to listening.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y9r-4Q-Sxy">
+                                <rect key="frame" x="260" y="160" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="JVX-Q8-qMZ"/>
+                                    <constraint firstAttribute="height" constant="80" id="lJO-jg-qdl"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c9J-zG-ahb">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="fmv-gE-11C">
+                                        <rect key="frame" x="282" y="281" width="37" height="37"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="fmv-gE-11C" firstAttribute="centerX" secondItem="c9J-zG-ahb" secondAttribute="centerX" id="fto-Zn-ggo"/>
+                                    <constraint firstItem="fmv-gE-11C" firstAttribute="centerY" secondItem="c9J-zG-ahb" secondAttribute="centerY" id="oAF-2G-9bv"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.6588235294" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="uWz-W3-LQo" firstAttribute="top" secondItem="c9J-zG-ahb" secondAttribute="bottom" id="54y-7Z-XeP"/>
                             <constraint firstItem="9Y5-wG-4WW" firstAttribute="top" secondItem="uWz-W3-LQo" secondAttribute="bottom" constant="20" id="8Sy-zd-4Ze"/>
                             <constraint firstAttribute="trailing" secondItem="BCJ-ip-2hH" secondAttribute="trailing" constant="100" id="A5b-aI-XZ9"/>
-                            <constraint firstAttribute="trailing" secondItem="uWz-W3-LQo" secondAttribute="trailing" constant="40" id="AvC-HS-evx"/>
+                            <constraint firstAttribute="trailing" secondItem="uWz-W3-LQo" secondAttribute="trailing" constant="20" id="AvC-HS-evx"/>
                             <constraint firstItem="9Y5-wG-4WW" firstAttribute="top" secondItem="cm4-Xx-HUa" secondAttribute="bottom" constant="20" id="CWf-RU-qBv"/>
+                            <constraint firstItem="c9J-zG-ahb" firstAttribute="leading" secondItem="M78-Ec-stY" secondAttribute="leadingMargin" id="CwG-p3-qJ8"/>
+                            <constraint firstItem="c9J-zG-ahb" firstAttribute="top" secondItem="M78-Ec-stY" secondAttribute="top" id="MdR-f4-luX"/>
+                            <constraint firstItem="Y9r-4Q-Sxy" firstAttribute="centerX" secondItem="M78-Ec-stY" secondAttribute="centerX" id="PWw-nr-d0b"/>
+                            <constraint firstItem="Y9r-4Q-Sxy" firstAttribute="top" secondItem="BCJ-ip-2hH" secondAttribute="bottom" constant="10" id="RMN-MP-lZ7"/>
+                            <constraint firstItem="c9J-zG-ahb" firstAttribute="top" secondItem="cm4-Xx-HUa" secondAttribute="bottom" id="VxG-aZ-cwi"/>
                             <constraint firstItem="9Y5-wG-4WW" firstAttribute="centerX" secondItem="M78-Ec-stY" secondAttribute="centerX" id="Xjf-KY-qPG"/>
-                            <constraint firstItem="uWz-W3-LQo" firstAttribute="top" secondItem="BCJ-ip-2hH" secondAttribute="bottom" constant="20" id="Y0Z-xt-XoR"/>
+                            <constraint firstItem="uWz-W3-LQo" firstAttribute="top" secondItem="BCJ-ip-2hH" secondAttribute="bottom" constant="120" id="Y0Z-xt-XoR"/>
                             <constraint firstItem="BCJ-ip-2hH" firstAttribute="centerX" secondItem="M78-Ec-stY" secondAttribute="centerX" id="a5h-tD-OUe"/>
                             <constraint firstItem="uWz-W3-LQo" firstAttribute="centerY" secondItem="M78-Ec-stY" secondAttribute="centerY" id="cYy-yf-RBY"/>
                             <constraint firstItem="uWz-W3-LQo" firstAttribute="leading" secondItem="BCJ-ip-2hH" secondAttribute="leading" id="dXC-jP-t0u"/>
+                            <constraint firstItem="uWz-W3-LQo" firstAttribute="top" secondItem="Y9r-4Q-Sxy" secondAttribute="bottom" constant="10" id="e2R-qv-F5r"/>
+                            <constraint firstAttribute="trailing" secondItem="c9J-zG-ahb" secondAttribute="trailing" id="jFq-lx-Jno"/>
                             <constraint firstItem="9Y5-wG-4WW" firstAttribute="leading" secondItem="M78-Ec-stY" secondAttribute="leading" constant="20" id="lpB-QK-wRk"/>
-                            <constraint firstItem="uWz-W3-LQo" firstAttribute="leading" secondItem="M78-Ec-stY" secondAttribute="leading" constant="40" id="mKh-VG-AOo"/>
+                            <constraint firstItem="uWz-W3-LQo" firstAttribute="leading" secondItem="M78-Ec-stY" secondAttribute="leading" constant="20" id="mKh-VG-AOo"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="c9J-zG-ahb" secondAttribute="trailing" id="nHg-vM-dUV"/>
                             <constraint firstItem="BCJ-ip-2hH" firstAttribute="leading" secondItem="M78-Ec-stY" secondAttribute="leading" constant="100" id="nTS-ee-yul"/>
+                            <constraint firstItem="dte-FE-53L" firstAttribute="top" secondItem="c9J-zG-ahb" secondAttribute="bottom" id="sol-le-82F"/>
                             <constraint firstItem="uWz-W3-LQo" firstAttribute="trailing" secondItem="BCJ-ip-2hH" secondAttribute="trailing" id="u1W-Wy-vDp"/>
+                            <constraint firstItem="c9J-zG-ahb" firstAttribute="leading" secondItem="M78-Ec-stY" secondAttribute="leading" id="xGm-lf-7sc"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="VxG-aZ-cwi"/>
+                                <exclude reference="nHg-vM-dUV"/>
+                                <exclude reference="xGm-lf-7sc"/>
                                 <exclude reference="A5b-aI-XZ9"/>
                                 <exclude reference="nTS-ee-yul"/>
+                                <exclude reference="54y-7Z-XeP"/>
+                                <exclude reference="Y0Z-xt-XoR"/>
                                 <exclude reference="CWf-RU-qBv"/>
                                 <exclude reference="lpB-QK-wRk"/>
                             </mask>
@@ -124,6 +178,10 @@
                     </view>
                     <navigationItem key="navigationItem" title="Audible Nomad" id="f9U-sr-1gw"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+                    <connections>
+                        <outlet property="iconView" destination="Y9r-4Q-Sxy" id="IWO-C5-0Rw"/>
+                        <outlet property="loadingView" destination="c9J-zG-ahb" id="cA3-bI-xRv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wXe-WD-yEd" sceneMemberID="firstResponder"/>
             </objects>

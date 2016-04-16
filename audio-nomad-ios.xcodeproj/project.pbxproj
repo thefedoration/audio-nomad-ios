@@ -183,6 +183,7 @@
 		B9A5544F1CC1D1A4005FF6B0 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B99938DF1CC2D64300A8A006 /* User.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";

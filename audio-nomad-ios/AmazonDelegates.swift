@@ -12,25 +12,18 @@ class AMZNAuthorizeUserDelegate: NSObject, AIAuthenticationDelegate {
     func requestDidSucceed(apiResult: APIResult!) {
         print("succeed")
         
-        let delegate = AppDelegate.getAppDelegate()
-        delegate.transitionToMainViewController()
-        
         //let delegate: AMZNGetProfileDelegate = AMZNGetProfileDelegate()
         AIMobileLib.getProfile(AMZNGetProfileDelegate())
     }
     
     func requestDidFail(errorResponse: APIError) {
-        print("fail")
-        print(errorResponse.error.code)
-        print(errorResponse)
-        print(errorResponse.error)
-        print(errorResponse.error.message)
+
         let message: String = errorResponse.error.message
         // Your code when the authorization fails.
         UIAlertView(title: "", message: "User authorization failed with message: \(errorResponse.error.message)", delegate: nil, cancelButtonTitle: "OK", otherButtonTitles: "").show()
     }
-    
 }
+
 
 
 class AMZNGetProfileDelegate: NSObject, AIAuthenticationDelegate {
@@ -43,10 +36,14 @@ class AMZNGetProfileDelegate: NSObject, AIAuthenticationDelegate {
         let user_id: String = ((apiResult.result as! [NSObject : AnyObject])["user_id"] as! String)
         let postal_code: String = ((apiResult.result as! [NSObject : AnyObject])["postal_code"] as! String)
         // Pass data to view controller
-        print(name)
-        print(email)
-        print(user_id)
-        print(postal_code)
+        
+        User.name = name
+        User.email = email
+        User.user_id = user_id
+        print("got it")
+        
+        let delegate = AppDelegate.getAppDelegate()
+        delegate.transitionToMainViewController()
     }
     
     func requestDidFail(errorResponse: APIError) {
@@ -67,11 +64,11 @@ class AMZNGetAccessTokenDelegate: NSObject, AIAuthenticationDelegate {
 
     func requestDidSucceed(apiResult: APIResult) {
         
-        let delegate = AppDelegate.getAppDelegate()
-        delegate.transitionToMainViewController()
+//        let delegate = AppDelegate.getAppDelegate()
+//        delegate.transitionToMainViewController()
 //        print("token success")
-//        var delegate: AMZNGetProfileDelegate = AMZNGetProfileDelegate()
-//        AIMobileLib.getProfile(delegate)
+        var delegate: AMZNGetProfileDelegate = AMZNGetProfileDelegate()
+        AIMobileLib.getProfile(delegate)
     }
     
     func requestDidFail(errorResponse: APIError) {
