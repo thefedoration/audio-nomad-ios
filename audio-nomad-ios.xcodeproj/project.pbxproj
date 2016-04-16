@@ -155,6 +155,7 @@
 		B9A5544B1CC1D17F005FF6B0 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				B9A554771CC2C39F005FF6B0 /* AmazonDelegates.swift */,
 				B9A5544C1CC1D190005FF6B0 /* MainViewController.swift */,
 				B9A554661CC1EAB6005FF6B0 /* ImageProcessorViewController.swift */,
 			);
@@ -328,6 +329,7 @@
 				D367B6321CC2BFDC006AD88B /* HTTP.swift in Sources */,
 				B9A554601CC1E2EC005FF6B0 /* Settings.swift in Sources */,
 				B9A554361CC1CCDD005FF6B0 /* AppDelegate.swift in Sources */,
+				B9A554781CC2C39F005FF6B0 /* AmazonDelegates.swift in Sources */,
 				B9A5546C1CC28FCE005FF6B0 /* FontAwesome.swift in Sources */,
 				B9A554671CC1EAB6005FF6B0 /* ImageProcessorViewController.swift in Sources */,
 			);
