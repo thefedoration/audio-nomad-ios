@@ -21,7 +21,12 @@ class MainViewController: UIViewController, UINavigationControllerDelegate {
         // Do any additional setup after loading the view.
         self.styleScreen()
         
-        self.infoLabel.text = "Welcome \(User.name!)! Press the button below to upload a picture of your book."
+        if let name = User.name {
+            self.infoLabel.text = "Welcome \(name)! Press the button below to upload a picture of your book."
+        } else {
+            self.infoLabel.text = "Welcome! Press the button below to upload a picture of your book."
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {

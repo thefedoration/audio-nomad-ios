@@ -19,6 +19,7 @@ class BookDetailViewController: UIViewController {
     
     // MARK: - Variables
     var ASIN = "B00KTEH7WQ"
+    var user = User.user_id
     
     override func viewDidLoad() {
         super.viewDidLoad()

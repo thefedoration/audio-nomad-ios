@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B99938DE1CC2CB0300A8A006 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99938DD1CC2CB0300A8A006 /* LoginViewController.swift */; };
+		B99938E01CC2D64300A8A006 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99938DF1CC2D64300A8A006 /* User.swift */; };
 		AAC55390D8F1DF1FC16810D8 /* Pods_audio_nomad_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFC1CEAB1C066B9544F64FAF /* Pods_audio_nomad_ios.framework */; };
 		B9A554361CC1CCDD005FF6B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A554351CC1CCDD005FF6B0 /* AppDelegate.swift */; };
 		B9A5543B1CC1CCDD005FF6B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9A554391CC1CCDD005FF6B0 /* Main.storyboard */; };
@@ -36,6 +37,7 @@
 
 /* Begin PBXFileReference section */
 		B99938DD1CC2CB0300A8A006 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		B99938DF1CC2D64300A8A006 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		13EE47D0F75E94DB41308893 /* Pods-audio-nomad-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-audio-nomad-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-audio-nomad-ios/Pods-audio-nomad-ios.release.xcconfig"; sourceTree = "<group>"; };
 		21A56A03318737F7B732819E /* Pods-audio-nomad-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-audio-nomad-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-audio-nomad-ios/Pods-audio-nomad-ios.debug.xcconfig"; sourceTree = "<group>"; };
 		B9A554321CC1CCDB005FF6B0 /* audio-nomad-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "audio-nomad-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -342,6 +344,7 @@
 				B9A554601CC1E2EC005FF6B0 /* Settings.swift in Sources */,
 				B9A554361CC1CCDD005FF6B0 /* AppDelegate.swift in Sources */,
 				B99938DE1CC2CB0300A8A006 /* LoginViewController.swift in Sources */,
+				B99938E01CC2D64300A8A006 /* User.swift in Sources */,
 				D367B6361CC2CF91006AD88B /* Extensions.swift in Sources */,
 				D367B6341CC2C9E1006AD88B /* BookDetailViewController.swift in Sources */,
 				B9A554781CC2C39F005FF6B0 /* AmazonDelegates.swift in Sources */,
