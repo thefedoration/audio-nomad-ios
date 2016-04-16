@@ -18,6 +18,7 @@ class MainViewController: UIViewController, UINavigationControllerDelegate {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.styleScreen()
     }
 
     override func didReceiveMemoryWarning() {
@@ -26,11 +27,66 @@ class MainViewController: UIViewController, UINavigationControllerDelegate {
     }
     
     // MARK: - Styles
-    
+    func styleScreen(){
+        
+        self.view.backgroundColor = Settings.BackgroundColor
+        self.navigationController?.navigationBar.barTintColor = Settings.LightBackgroundColor
+        self.navigationController?.navigationBar.tintColor = Settings.SecondaryTextColor
+        self.navigationController?.navigationBar.titleTextAttributes = [
+            NSForegroundColorAttributeName: Settings.PrimaryTextColor,
+        ]
+        UIBarButtonItem.appearance().setTitleTextAttributes([NSFontAttributeName: UIFont.systemFontOfSize(14.0)], forState: UIControlState.Normal)
+
+    }
     
     // MARK: - Methods
+    func scaleImage(image: UIImage, maxDimension: CGFloat) -> UIImage {
+        print("scaling")
+        var scaledSize = CGSize(width: maxDimension, height: maxDimension)
+        var scaleFactor: CGFloat
+        
+        if image.size.width > image.size.height {
+            scaleFactor = image.size.height / image.size.width
+            scaledSize.width = maxDimension
+            scaledSize.height = scaledSize.width * scaleFactor
+        } else {
+            scaleFactor = image.size.width / image.size.height
+            scaledSize.height = maxDimension
+            scaledSize.width = scaledSize.height * scaleFactor
+        }
+        
+        UIGraphicsBeginImageContext(scaledSize)
+        image.drawInRect(CGRectMake(0, 0, scaledSize.width, scaledSize.height))
+        let scaledImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        return scaledImage
+    }
+    
+    func performImageRecognition(image: UIImage) {
+        print("doing the tess stuff")
+        let tesseract = G8Tesseract()
+        tesseract.language = "eng"
+//        tesseract.engineMode = .TesseractCubeCombined
+        tesseract.engineMode = .TesseractOnly
+        tesseract.pageSegmentationMode = .Auto
+        tesseract.maximumRecognitionTime = 15.0
+        tesseract.image = image.g8_blackAndWhite()
+        tesseract.recognize()
+        print("we're done")
+        print(tesseract.recognizedText)
+        
+        let alert = UIAlertController(title: "Results", message: tesseract.recognizedText, preferredStyle: .Alert)
+        alert.addAction(UIAlertAction(title: "Sup dude", style: .Cancel, handler: nil))
+        self.presentViewController(alert, animated: true, completion: nil)
+
+    }
     
     // MARK: - Actions
+    
+    @IBAction func goToUploadPhotoScreen(sender: AnyObject) {
+        performSegueWithIdentifier("goToUploadPhotoScreen", sender: nil)
+    }
     
     @IBAction func takePhoto(sender: AnyObject) {
 
@@ -66,5 +122,15 @@ class MainViewController: UIViewController, UINavigationControllerDelegate {
 
 
 extension MainViewController: UIImagePickerControllerDelegate {
-    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        let selectedPhoto = info[UIImagePickerControllerOriginalImage] as! UIImage
+        let scaledImage = scaleImage(selectedPhoto, maxDimension: 640)
+        
+        print("loading")
+        
+        dismissViewControllerAnimated(true, completion: {
+            self.performImageRecognition(scaledImage)
+        })
+    }
 }
+

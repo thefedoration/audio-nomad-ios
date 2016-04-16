@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func transitionToMainViewController() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let initialViewController = storyboard.instantiateViewControllerWithIdentifier("MainViewController")
+        let initialViewController = storyboard.instantiateViewControllerWithIdentifier("MainNavigationViewController")
         self.window?.rootViewController = initialViewController
         self.window?.makeKeyAndVisible()
     }
