@@ -21,6 +21,8 @@
 		B9A554651CC1EA12005FF6B0 /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B9A554641CC1EA12005FF6B0 /* Ionicons.ttf */; };
 		B9A554671CC1EAB6005FF6B0 /* ImageProcessorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A554661CC1EAB6005FF6B0 /* ImageProcessorViewController.swift */; };
 		B9A554691CC1EAC4005FF6B0 /* TextConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A554681CC1EAC4005FF6B0 /* TextConfirmViewController.swift */; };
+		B9A5546C1CC28FCE005FF6B0 /* FontAwesome.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A5546B1CC28FCE005FF6B0 /* FontAwesome.swift */; };
+		B9A5546E1CC28FF7005FF6B0 /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = B9A5546D1CC28FF7005FF6B0 /* FontAwesome.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +43,8 @@
 		B9A554641CC1EA12005FF6B0 /* Ionicons.ttf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Ionicons.ttf; sourceTree = "<group>"; };
 		B9A554661CC1EAB6005FF6B0 /* ImageProcessorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageProcessorViewController.swift; sourceTree = "<group>"; };
 		B9A554681CC1EAC4005FF6B0 /* TextConfirmViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextConfirmViewController.swift; sourceTree = "<group>"; };
+		B9A5546B1CC28FCE005FF6B0 /* FontAwesome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontAwesome.swift; sourceTree = "<group>"; };
+		B9A5546D1CC28FF7005FF6B0 /* FontAwesome.otf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FontAwesome.otf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +141,8 @@
 			children = (
 				B9A554621CC1E9DB005FF6B0 /* Ionicons.swift */,
 				B9A554641CC1EA12005FF6B0 /* Ionicons.ttf */,
+				B9A5546B1CC28FCE005FF6B0 /* FontAwesome.swift */,
+				B9A5546D1CC28FF7005FF6B0 /* FontAwesome.otf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -212,6 +218,7 @@
 			files = (
 				B9A554401CC1CCDD005FF6B0 /* LaunchScreen.storyboard in Resources */,
 				B9A5543D1CC1CCDD005FF6B0 /* Assets.xcassets in Resources */,
+				B9A5546E1CC28FF7005FF6B0 /* FontAwesome.otf in Resources */,
 				B9A554651CC1EA12005FF6B0 /* Ionicons.ttf in Resources */,
 				B9A554561CC1D4C3005FF6B0 /* tessdata in Resources */,
 				B9A5543B1CC1CCDD005FF6B0 /* Main.storyboard in Resources */,
@@ -230,6 +237,7 @@
 				B9A5544D1CC1D190005FF6B0 /* MainViewController.swift in Sources */,
 				B9A554601CC1E2EC005FF6B0 /* Settings.swift in Sources */,
 				B9A554361CC1CCDD005FF6B0 /* AppDelegate.swift in Sources */,
+				B9A5546C1CC28FCE005FF6B0 /* FontAwesome.swift in Sources */,
 				B9A554671CC1EAB6005FF6B0 /* ImageProcessorViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

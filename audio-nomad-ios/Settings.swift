@@ -21,4 +21,5 @@ struct Settings {
     static let SecondaryAccentColor = UIColor(red: 46/255, green: 204/255, blue:113/255, alpha: 1)
     static let PrimaryTextColor = UIColor(red: 236/255, green: 240/255, blue:241/255, alpha: 1)
     static let SecondaryTextColor = UIColor(red: 189/255, green: 195/255, blue:199/255, alpha: 1)
+    static let LightShadowColor = UIColor(red: 255/255, green: 255/255, blue:255/255, alpha: 0.2)
 }
