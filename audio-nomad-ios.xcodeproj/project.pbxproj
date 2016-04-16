@@ -14,6 +14,10 @@
 		B9A554401CC1CCDD005FF6B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9A5543E1CC1CCDD005FF6B0 /* LaunchScreen.storyboard */; };
 		B9A5544A1CC1D17B005FF6B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9A554491CC1D17B005FF6B0 /* Main.storyboard */; };
 		B9A5544D1CC1D190005FF6B0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A5544C1CC1D190005FF6B0 /* MainViewController.swift */; };
+		B9A554541CC1D49F005FF6B0 /* TesseractOCR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9A554531CC1D49F005FF6B0 /* TesseractOCR.framework */; };
+		B9A554561CC1D4C3005FF6B0 /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = B9A554551CC1D4C3005FF6B0 /* tessdata */; };
+		B9A554581CC1D509005FF6B0 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9A554571CC1D509005FF6B0 /* CoreImage.framework */; };
+		B9A5545A1CC1D515005FF6B0 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B9A554591CC1D515005FF6B0 /* libstdc++.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,11 @@
 		B9A554411CC1CCDD005FF6B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B9A554491CC1D17B005FF6B0 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		B9A5544C1CC1D190005FF6B0 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		B9A554531CC1D49F005FF6B0 /* TesseractOCR.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TesseractOCR.framework; sourceTree = "<group>"; };
+		B9A554551CC1D4C3005FF6B0 /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tessdata; sourceTree = "<group>"; };
+		B9A554571CC1D509005FF6B0 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		B9A554591CC1D515005FF6B0 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
+		B9A5545B1CC1D5B5005FF6B0 /* audio-nomad-ios-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "audio-nomad-ios-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +42,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9A5545A1CC1D515005FF6B0 /* libstdc++.tbd in Frameworks */,
+				B9A554581CC1D509005FF6B0 /* CoreImage.framework in Frameworks */,
+				B9A554541CC1D49F005FF6B0 /* TesseractOCR.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,8 +54,11 @@
 		B9A554291CC1CCDB005FF6B0 = {
 			isa = PBXGroup;
 			children = (
+				B9A554591CC1D515005FF6B0 /* libstdc++.tbd */,
+				B9A554571CC1D509005FF6B0 /* CoreImage.framework */,
 				B9A554341CC1CCDD005FF6B0 /* audio-nomad-ios */,
 				B9A554331CC1CCDB005FF6B0 /* Products */,
+				B9A5545B1CC1D5B5005FF6B0 /* audio-nomad-ios-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -73,6 +88,8 @@
 		B9A554471CC1CE46005FF6B0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B9A554551CC1D4C3005FF6B0 /* tessdata */,
+				B9A554531CC1D49F005FF6B0 /* TesseractOCR.framework */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -170,6 +187,7 @@
 			files = (
 				B9A554401CC1CCDD005FF6B0 /* LaunchScreen.storyboard in Resources */,
 				B9A5543D1CC1CCDD005FF6B0 /* Assets.xcassets in Resources */,
+				B9A554561CC1D4C3005FF6B0 /* tessdata in Resources */,
 				B9A5543B1CC1CCDD005FF6B0 /* Main.storyboard in Resources */,
 				B9A5544A1CC1D17B005FF6B0 /* Main.storyboard in Resources */,
 			);
@@ -297,10 +315,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LIBRARY = "compiler-default";
+				CLANG_ENABLE_MODULES = YES;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/audio-nomad-ios",
+				);
 				INFOPLIST_FILE = "audio-nomad-ios/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				"OTHER_LDFLAGS[arch=*]" = "-lstdc++";
 				PRODUCT_BUNDLE_IDENTIFIER = "thefedoration.audio-nomad-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "audio-nomad-ios-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -308,10 +336,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LIBRARY = "compiler-default";
+				CLANG_ENABLE_MODULES = YES;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/audio-nomad-ios",
+				);
 				INFOPLIST_FILE = "audio-nomad-ios/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				"OTHER_LDFLAGS[arch=*]" = "-lstdc++";
 				PRODUCT_BUNDLE_IDENTIFIER = "thefedoration.audio-nomad-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "audio-nomad-ios-Bridging-Header.h";
 			};
 			name = Release;
 		};
