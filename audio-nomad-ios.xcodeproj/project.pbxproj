@@ -54,6 +54,8 @@
 		B9A554341CC1CCDD005FF6B0 /* audio-nomad-ios */ = {
 			isa = PBXGroup;
 			children = (
+				B9A554481CC1CE53005FF6B0 /* Main */,
+				B9A554471CC1CE46005FF6B0 /* Supporting Files */,
 				B9A554351CC1CCDD005FF6B0 /* AppDelegate.swift */,
 				B9A554371CC1CCDD005FF6B0 /* ViewController.swift */,
 				B9A554391CC1CCDD005FF6B0 /* Main.storyboard */,
@@ -62,6 +64,20 @@
 				B9A554411CC1CCDD005FF6B0 /* Info.plist */,
 			);
 			path = "audio-nomad-ios";
+			sourceTree = "<group>";
+		};
+		B9A554471CC1CE46005FF6B0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B9A554481CC1CE53005FF6B0 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
