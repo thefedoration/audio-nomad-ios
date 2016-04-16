@@ -7,12 +7,14 @@
 //
 
 import UIKit
+import Alamofire
 
 class ImageProcessorViewController: UIViewController, UINavigationControllerDelegate {
 
     // MARK: - Variables
     var sliderValue = 50
     var processingTime = 60.0
+    private var ASIN = "B005FRGT44"
     
     // MARK: - Outlets
     @IBOutlet weak var imageContainerView: UIView!
@@ -142,7 +144,7 @@ class ImageProcessorViewController: UIViewController, UINavigationControllerDele
         
         // clean up text
         let textArray = text!.componentsSeparatedByString("\n")
-        var output = [[AnyObject]]()
+        var output = [[String]]()
         for textLine in textArray{
             if textLine != "" && textLine != " "{
                 var lineWords = textLine.componentsSeparatedByString(" ")
@@ -152,9 +154,27 @@ class ImageProcessorViewController: UIViewController, UINavigationControllerDele
                 }
             }
         }
+        
+        let url = "http://52.91.217.58/nomad/text-to-book/"
+        Alamofire.request(HTTP.post(url, ["text": output]))
+        .validate()
+        .responseJSON { response in
+            if response.result.isSuccess {
+                if let data = response.result.value as? [String: AnyObject] {
+                    self.ASIN = data["ASIN"] as! String
+                    self.performSegueWithIdentifier("BookDetailSegue", sender: self)
+                }
+            } else {
+                print("LKSDJFLKSJDFLKSJLDKF")
+            }
+        }
         print(output)
         
         return
+    }
+    
+    private func transitionToDetails(ASIN: String) {
+        
     }
     
     
@@ -208,6 +228,19 @@ class ImageProcessorViewController: UIViewController, UINavigationControllerDele
     
     @IBAction func sliderValueChanged(sender: UISlider) {
         self.sliderValue = Int(sender.value)
+    }
+    
+    // MARK: - Navigation
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let identifier = segue.identifier {
+            switch identifier {
+            case "BookDetailSegue":
+                let dvc = segue.destinationViewController as! BookDetailViewController
+                dvc.ASIN = self.ASIN
+            default:
+                assertionFailure("Prepare for segue fell through")
+            }
+        }
     }
 
 }

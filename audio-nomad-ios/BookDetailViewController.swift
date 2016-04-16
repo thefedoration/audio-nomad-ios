@@ -24,8 +24,17 @@ class BookDetailViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        styleScreen()
         loadBookData()
         loadPersonalBookData()
+    }
+    
+    private func styleScreen(){
+        self.view.backgroundColor = Settings.BackgroundColor
+        self.titleLabel.textColor = Settings.PrimaryTextColor
+        self.authorLabel.textColor = Settings.PrimaryTextColor
+        self.narratorLabel.textColor = Settings.PrimaryTextColor
+//        self.titleLabel.textColor = Settings.PrimaryTextColor
     }
     
     private func loadBookData() {

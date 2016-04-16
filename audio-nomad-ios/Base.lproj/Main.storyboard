@@ -316,6 +316,7 @@
                         <outlet property="slider" destination="cAb-DO-5M6" id="uP6-Fp-JhR"/>
                         <outlet property="uploadButton" destination="mCK-ls-km2" id="8to-Nh-3at"/>
                         <outlet property="uploadContainerView" destination="hx0-TM-UJ3" id="Jnd-3P-hI1"/>
+                        <segue destination="52t-mi-gl0" kind="show" identifier="BookDetailSegue" id="u1y-PG-aGq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Poz-ck-ctU" sceneMemberID="firstResponder"/>
@@ -325,7 +326,7 @@
         <!--Book Detail View Controller-->
         <scene sceneID="WF9-fV-wXJ">
             <objects>
-                <viewController id="52t-mi-gl0" customClass="BookDetailViewController" customModule="audio_nomad_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BookDetailViewController" id="52t-mi-gl0" customClass="BookDetailViewController" customModule="audio_nomad_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tIi-lG-MLH"/>
                         <viewControllerLayoutGuide type="bottom" id="FU7-VT-85m"/>
@@ -334,26 +335,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KcC-Ob-mVz">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KcC-Ob-mVz">
                                 <rect key="frame" x="20" y="28" width="560" height="33"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kEU-hu-Cc3">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Author" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kEU-hu-Cc3">
                                 <rect key="frame" x="20" y="61" width="560" height="23"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yve-6T-l5W">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yve-6T-l5W">
                                 <rect key="frame" x="150" y="115" width="300" height="300"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="EWr-ng-s3y"/>
                                     <constraint firstAttribute="width" secondItem="yve-6T-l5W" secondAttribute="height" multiplier="1:1" id="QEE-7r-iyQ"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Narrator" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ke9-gD-qCy">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Narrator" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ke9-gD-qCy">
                                 <rect key="frame" x="20" y="84" width="560" height="23"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -387,6 +388,7 @@
                             </mask>
                         </variation>
                     </view>
+                    <navigationItem key="navigationItem" id="bnq-Jm-Rtg"/>
                     <connections>
                         <outlet property="authorLabel" destination="kEU-hu-Cc3" id="Y9Z-iy-ZOH"/>
                         <outlet property="coverImageView" destination="yve-6T-l5W" id="lUd-uS-xF9"/>
@@ -396,7 +398,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yQL-z8-54d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="410" y="1002"/>
+            <point key="canvasLocation" x="1150" y="1070"/>
         </scene>
     </scenes>
     <resources>
