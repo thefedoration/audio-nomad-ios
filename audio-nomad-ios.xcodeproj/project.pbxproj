@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B99938DE1CC2CB0300A8A006 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99938DD1CC2CB0300A8A006 /* LoginViewController.swift */; };
 		B9A554361CC1CCDD005FF6B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A554351CC1CCDD005FF6B0 /* AppDelegate.swift */; };
 		B9A5543B1CC1CCDD005FF6B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9A554391CC1CCDD005FF6B0 /* Main.storyboard */; };
 		B9A5543D1CC1CCDD005FF6B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9A5543C1CC1CCDD005FF6B0 /* Assets.xcassets */; };
@@ -30,6 +31,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B99938DD1CC2CB0300A8A006 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B9A554321CC1CCDB005FF6B0 /* audio-nomad-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "audio-nomad-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9A554351CC1CCDD005FF6B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B9A5543A1CC1CCDD005FF6B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 				B9A554771CC2C39F005FF6B0 /* AmazonDelegates.swift */,
 				B9A5544C1CC1D190005FF6B0 /* MainViewController.swift */,
 				B9A554661CC1EAB6005FF6B0 /* ImageProcessorViewController.swift */,
+				B99938DD1CC2CB0300A8A006 /* LoginViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -252,6 +255,7 @@
 				B9A5544D1CC1D190005FF6B0 /* MainViewController.swift in Sources */,
 				B9A554601CC1E2EC005FF6B0 /* Settings.swift in Sources */,
 				B9A554361CC1CCDD005FF6B0 /* AppDelegate.swift in Sources */,
+				B99938DE1CC2CB0300A8A006 /* LoginViewController.swift in Sources */,
 				B9A554781CC2C39F005FF6B0 /* AmazonDelegates.swift in Sources */,
 				B9A5546C1CC28FCE005FF6B0 /* FontAwesome.swift in Sources */,
 				B9A554671CC1EAB6005FF6B0 /* ImageProcessorViewController.swift in Sources */,

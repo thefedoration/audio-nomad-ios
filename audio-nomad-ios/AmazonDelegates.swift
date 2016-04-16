@@ -11,10 +11,12 @@
 class AMZNAuthorizeUserDelegate: NSObject, AIAuthenticationDelegate {
     func requestDidSucceed(apiResult: APIResult!) {
         print("succeed")
-        // Load new view controller with user identifying information
-        // as the user is now successfully logged in.
-        let delegate: AMZNGetProfileDelegate = AMZNGetProfileDelegate()
-        AIMobileLib.getProfile(delegate)
+        
+        let delegate = AppDelegate.getAppDelegate()
+        delegate.transitionToMainViewController()
+        
+        //let delegate: AMZNGetProfileDelegate = AMZNGetProfileDelegate()
+        AIMobileLib.getProfile(AMZNGetProfileDelegate())
     }
     
     func requestDidFail(errorResponse: APIError) {
@@ -41,6 +43,10 @@ class AMZNGetProfileDelegate: NSObject, AIAuthenticationDelegate {
         let user_id: String = ((apiResult.result as! [NSObject : AnyObject])["user_id"] as! String)
         let postal_code: String = ((apiResult.result as! [NSObject : AnyObject])["postal_code"] as! String)
         // Pass data to view controller
+        print(name)
+        print(email)
+        print(user_id)
+        print(postal_code)
     }
     
     func requestDidFail(errorResponse: APIError) {
@@ -58,17 +64,14 @@ class AMZNGetProfileDelegate: NSObject, AIAuthenticationDelegate {
 }
 
 class AMZNGetAccessTokenDelegate: NSObject, AIAuthenticationDelegate {
-    func checkIsUserSignedIn() {
-        print("checking if user ir logged int")
-        var delegate: AMZNGetAccessTokenDelegate = AMZNGetAccessTokenDelegate()
-        var requestScopes: [AnyObject] = ["profile", "postal_code"]
-        AIMobileLib.getAccessTokenForScopes(requestScopes, withOverrideParams: nil, delegate: delegate)
-    }
-    
+
     func requestDidSucceed(apiResult: APIResult) {
-        print("token success")
-        var delegate: AMZNGetProfileDelegate = AMZNGetProfileDelegate()
-        AIMobileLib.getProfile(delegate)
+        
+        let delegate = AppDelegate.getAppDelegate()
+        delegate.transitionToMainViewController()
+//        print("token success")
+//        var delegate: AMZNGetProfileDelegate = AMZNGetProfileDelegate()
+//        AIMobileLib.getProfile(delegate)
     }
     
     func requestDidFail(errorResponse: APIError) {
@@ -88,8 +91,10 @@ class AMZNGetAccessTokenDelegate: NSObject, AIAuthenticationDelegate {
 
 class AMZNLogoutDelegate: NSObject, AIAuthenticationDelegate {
     func requestDidSucceed(apiResult: APIResult) {
-        // Your additional logic after the user authorization state is cleared.
-        UIAlertView(title: "", message: "User Logged out.", delegate: nil, cancelButtonTitle: "OK", otherButtonTitles: "").show()
+        print("no success")
+        // go to login screen
+        let delegate = AppDelegate.getAppDelegate()
+        delegate.transitionToLoginViewController()
     }
     
     func requestDidFail(errorResponse: APIError) {

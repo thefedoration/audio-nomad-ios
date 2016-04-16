@@ -42,20 +42,18 @@
                                     <segue destination="5rb-sq-aOn" kind="push" identifier="goToUploadPhotoScreen" id="9v3-i0-ZeW"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R0J-Wx-lvR">
-                                <rect key="frame" x="20" y="84" width="76" height="36"/>
-                                <state key="normal" image="btnLWA_Gold_77x36"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ga3-TR-KzT">
+                                <rect key="frame" x="25" y="88" width="44" height="30"/>
+                                <state key="normal" title="logout"/>
                                 <connections>
-                                    <action selector="onLoginButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ylm-gb-eEo"/>
+                                    <action selector="logoutButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="r38-yw-pNy"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="R0J-Wx-lvR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="DvB-Yt-bSv"/>
                             <constraint firstItem="yRu-Yc-b9x" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MTG-PS-x1Q"/>
                             <constraint firstItem="yRu-Yc-b9x" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="NfM-Fl-BDZ"/>
-                            <constraint firstItem="R0J-Wx-lvR" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="pdj-ec-vJ8"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Audible Nomad" id="2MN-kt-QXr"/>
@@ -64,6 +62,71 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-309" y="331"/>
+        </scene>
+        <!--Audible Nomad-->
+        <scene sceneID="a6H-OH-dJP">
+            <objects>
+                <viewController storyboardIdentifier="LoginViewController" id="CR0-Ky-PgU" customClass="LoginViewController" customModule="audio_nomad_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cm4-Xx-HUa"/>
+                        <viewControllerLayoutGuide type="bottom" id="dte-FE-53L"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="M78-Ec-stY">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Y5-wG-4WW">
+                                <rect key="frame" x="262" y="371" width="76" height="36"/>
+                                <state key="normal" image="btnLWA_Gold_77x36"/>
+                                <connections>
+                                    <action selector="onLoginButtonClicked:" destination="CR0-Ky-PgU" eventType="touchUpInside" id="79T-Oy-h5J"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uWz-W3-LQo">
+                                <rect key="frame" x="40" y="250" width="520" height="101"/>
+                                <string key="text">Audible Nomad is the app for users who listen to audio books on audible but also read real books too. By uploading a picture of what you are currently reading it can find the audio-book on Audible and play it at the place where you left off. Login to be able to seamlessly transition from reading to listening.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Audible Nomad" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BCJ-ip-2hH">
+                                <rect key="frame" x="40" y="194" width="520" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.6588235294" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="9Y5-wG-4WW" firstAttribute="top" secondItem="uWz-W3-LQo" secondAttribute="bottom" constant="20" id="8Sy-zd-4Ze"/>
+                            <constraint firstAttribute="trailing" secondItem="BCJ-ip-2hH" secondAttribute="trailing" constant="100" id="A5b-aI-XZ9"/>
+                            <constraint firstAttribute="trailing" secondItem="uWz-W3-LQo" secondAttribute="trailing" constant="40" id="AvC-HS-evx"/>
+                            <constraint firstItem="9Y5-wG-4WW" firstAttribute="top" secondItem="cm4-Xx-HUa" secondAttribute="bottom" constant="20" id="CWf-RU-qBv"/>
+                            <constraint firstItem="9Y5-wG-4WW" firstAttribute="centerX" secondItem="M78-Ec-stY" secondAttribute="centerX" id="Xjf-KY-qPG"/>
+                            <constraint firstItem="uWz-W3-LQo" firstAttribute="top" secondItem="BCJ-ip-2hH" secondAttribute="bottom" constant="20" id="Y0Z-xt-XoR"/>
+                            <constraint firstItem="BCJ-ip-2hH" firstAttribute="centerX" secondItem="M78-Ec-stY" secondAttribute="centerX" id="a5h-tD-OUe"/>
+                            <constraint firstItem="uWz-W3-LQo" firstAttribute="centerY" secondItem="M78-Ec-stY" secondAttribute="centerY" id="cYy-yf-RBY"/>
+                            <constraint firstItem="uWz-W3-LQo" firstAttribute="leading" secondItem="BCJ-ip-2hH" secondAttribute="leading" id="dXC-jP-t0u"/>
+                            <constraint firstItem="9Y5-wG-4WW" firstAttribute="leading" secondItem="M78-Ec-stY" secondAttribute="leading" constant="20" id="lpB-QK-wRk"/>
+                            <constraint firstItem="uWz-W3-LQo" firstAttribute="leading" secondItem="M78-Ec-stY" secondAttribute="leading" constant="40" id="mKh-VG-AOo"/>
+                            <constraint firstItem="BCJ-ip-2hH" firstAttribute="leading" secondItem="M78-Ec-stY" secondAttribute="leading" constant="100" id="nTS-ee-yul"/>
+                            <constraint firstItem="uWz-W3-LQo" firstAttribute="trailing" secondItem="BCJ-ip-2hH" secondAttribute="trailing" id="u1W-Wy-vDp"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="A5b-aI-XZ9"/>
+                                <exclude reference="nTS-ee-yul"/>
+                                <exclude reference="CWf-RU-qBv"/>
+                                <exclude reference="lpB-QK-wRk"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="Audible Nomad" id="f9U-sr-1gw"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wXe-WD-yEd" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-309" y="1070"/>
         </scene>
         <!--Upload Image-->
         <scene sceneID="s14-2R-X0T">
@@ -213,7 +276,7 @@
                                 <rect key="frame" x="20" y="74" width="560" height="66"/>
                                 <string key="text">Upload a picture of the text that you want to jump to in Audible. For best results, capture a 10 word by 10 line chunk of the page.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
