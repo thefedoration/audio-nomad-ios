@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AAC55390D8F1DF1FC16810D8 /* Pods_audio_nomad_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFC1CEAB1C066B9544F64FAF /* Pods_audio_nomad_ios.framework */; };
 		B9A554361CC1CCDD005FF6B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A554351CC1CCDD005FF6B0 /* AppDelegate.swift */; };
 		B9A5543B1CC1CCDD005FF6B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9A554391CC1CCDD005FF6B0 /* Main.storyboard */; };
 		B9A5543D1CC1CCDD005FF6B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9A5543C1CC1CCDD005FF6B0 /* Assets.xcassets */; };
@@ -26,9 +27,12 @@
 		B9A554721CC2B25C005FF6B0 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9A554711CC2B25C005FF6B0 /* Security.framework */; };
 		B9A554741CC2B261005FF6B0 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9A554731CC2B261005FF6B0 /* SafariServices.framework */; };
 		B9A554761CC2B268005FF6B0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9A554751CC2B268005FF6B0 /* CoreGraphics.framework */; };
+		D367B6321CC2BFDC006AD88B /* HTTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = D367B6311CC2BFDC006AD88B /* HTTP.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		13EE47D0F75E94DB41308893 /* Pods-audio-nomad-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-audio-nomad-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-audio-nomad-ios/Pods-audio-nomad-ios.release.xcconfig"; sourceTree = "<group>"; };
+		21A56A03318737F7B732819E /* Pods-audio-nomad-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-audio-nomad-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-audio-nomad-ios/Pods-audio-nomad-ios.debug.xcconfig"; sourceTree = "<group>"; };
 		B9A554321CC1CCDB005FF6B0 /* audio-nomad-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "audio-nomad-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9A554351CC1CCDD005FF6B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B9A5543A1CC1CCDD005FF6B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -51,6 +55,8 @@
 		B9A554711CC2B25C005FF6B0 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		B9A554731CC2B261005FF6B0 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
 		B9A554751CC2B268005FF6B0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D367B6311CC2BFDC006AD88B /* HTTP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTP.swift; sourceTree = "<group>"; };
+		EFC1CEAB1C066B9544F64FAF /* Pods_audio_nomad_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_audio_nomad_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,12 +71,30 @@
 				B9A5545A1CC1D515005FF6B0 /* libstdc++.tbd in Frameworks */,
 				B9A554581CC1D509005FF6B0 /* CoreImage.framework in Frameworks */,
 				B9A554541CC1D49F005FF6B0 /* TesseractOCR.framework in Frameworks */,
+				AAC55390D8F1DF1FC16810D8 /* Pods_audio_nomad_ios.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		64A77BDDF5A1996C5783EA72 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EFC1CEAB1C066B9544F64FAF /* Pods_audio_nomad_ios.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		99E26529F2109E7F35584CDC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				21A56A03318737F7B732819E /* Pods-audio-nomad-ios.debug.xcconfig */,
+				13EE47D0F75E94DB41308893 /* Pods-audio-nomad-ios.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		B9A554291CC1CCDB005FF6B0 = {
 			isa = PBXGroup;
 			children = (
@@ -80,6 +104,8 @@
 				B9A554341CC1CCDD005FF6B0 /* audio-nomad-ios */,
 				B9A554331CC1CCDB005FF6B0 /* Products */,
 				B9A5545B1CC1D5B5005FF6B0 /* audio-nomad-ios-Bridging-Header.h */,
+				99E26529F2109E7F35584CDC /* Pods */,
+				64A77BDDF5A1996C5783EA72 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -107,6 +133,7 @@
 				B9A5546A1CC1EB50005FF6B0 /* Frameworks */,
 				B9A554611CC1E9BF005FF6B0 /* Resources */,
 				B9A5545F1CC1E2EC005FF6B0 /* Settings.swift */,
+				D367B6311CC2BFDC006AD88B /* HTTP.swift */,
 				B9A554351CC1CCDD005FF6B0 /* AppDelegate.swift */,
 				B9A5543C1CC1CCDD005FF6B0 /* Assets.xcassets */,
 				B9A554411CC1CCDD005FF6B0 /* Info.plist */,
@@ -178,9 +205,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B9A554441CC1CCDD005FF6B0 /* Build configuration list for PBXNativeTarget "audio-nomad-ios" */;
 			buildPhases = (
+				3A62ACB8A1888A72DA9575C2 /* Check Pods Manifest.lock */,
 				B9A5542E1CC1CCDB005FF6B0 /* Sources */,
 				B9A5542F1CC1CCDB005FF6B0 /* Frameworks */,
 				B9A554301CC1CCDB005FF6B0 /* Resources */,
+				FDC8710408916F8D330F3EBB /* Embed Pods Frameworks */,
+				A371262F126C2EB38A93F6E6 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -240,6 +270,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3A62ACB8A1888A72DA9575C2 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A371262F126C2EB38A93F6E6 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-audio-nomad-ios/Pods-audio-nomad-ios-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FDC8710408916F8D330F3EBB /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-audio-nomad-ios/Pods-audio-nomad-ios-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B9A5542E1CC1CCDB005FF6B0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -247,6 +325,7 @@
 			files = (
 				B9A554631CC1E9DB005FF6B0 /* Ionicons.swift in Sources */,
 				B9A5544D1CC1D190005FF6B0 /* MainViewController.swift in Sources */,
+				D367B6321CC2BFDC006AD88B /* HTTP.swift in Sources */,
 				B9A554601CC1E2EC005FF6B0 /* Settings.swift in Sources */,
 				B9A554361CC1CCDD005FF6B0 /* AppDelegate.swift in Sources */,
 				B9A5546C1CC28FCE005FF6B0 /* FontAwesome.swift in Sources */,
@@ -361,6 +440,7 @@
 		};
 		B9A554451CC1CCDD005FF6B0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 21A56A03318737F7B732819E /* Pods-audio-nomad-ios.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_CXX_LIBRARY = "compiler-default";
@@ -382,6 +462,7 @@
 		};
 		B9A554461CC1CCDD005FF6B0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 13EE47D0F75E94DB41308893 /* Pods-audio-nomad-ios.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_CXX_LIBRARY = "compiler-default";
