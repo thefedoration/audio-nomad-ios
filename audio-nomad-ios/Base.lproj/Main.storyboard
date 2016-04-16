@@ -42,11 +42,20 @@
                                     <segue destination="5rb-sq-aOn" kind="push" identifier="goToUploadPhotoScreen" id="9v3-i0-ZeW"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R0J-Wx-lvR">
+                                <rect key="frame" x="20" y="84" width="76" height="36"/>
+                                <state key="normal" image="btnLWA_Gold_77x36"/>
+                                <connections>
+                                    <action selector="onLoginButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ylm-gb-eEo"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="R0J-Wx-lvR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="DvB-Yt-bSv"/>
                             <constraint firstItem="yRu-Yc-b9x" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MTG-PS-x1Q"/>
                             <constraint firstItem="yRu-Yc-b9x" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="NfM-Fl-BDZ"/>
+                            <constraint firstItem="R0J-Wx-lvR" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="pdj-ec-vJ8"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Audible Nomad" id="2MN-kt-QXr"/>
@@ -250,4 +259,7 @@
             <point key="canvasLocation" x="410" y="331"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="btnLWA_Gold_77x36" width="76" height="36"/>
+    </resources>
 </document>

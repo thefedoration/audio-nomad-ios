@@ -110,7 +110,7 @@ class ImageProcessorViewController: UIViewController, UINavigationControllerDele
         // set the accuracy and speed based off of the slider
         if self.sliderValue >= 75{
             tesseract.engineMode = .TesseractCubeCombined
-        } else if self.sliderValue >= 50{
+        } else if self.sliderValue > 50{
             tesseract.engineMode = .CubeOnly
         }  else {
             tesseract.engineMode = .TesseractOnly

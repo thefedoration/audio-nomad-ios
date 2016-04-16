@@ -11,7 +11,7 @@ import UIKit
 class MainViewController: UIViewController, UINavigationControllerDelegate {
     
     // MARK: - Variables
-    
+    var delegate = AMZNAuthorizeUserDelegate()
     
     // MARK: - Initializers
     override func viewDidLoad() {
@@ -48,11 +48,29 @@ class MainViewController: UIViewController, UINavigationControllerDelegate {
         performSegueWithIdentifier("goToUploadPhotoScreen", sender: nil)
     }
     
-    @IBAction func takePhoto(sender: AnyObject) {
-
+    
+    @IBAction func onLoginButtonClicked(sender: AnyObject) {
+        
+        // Requesting both scopes for the current user.
+        var requestScopes: [AnyObject] = ["profile", "postal_code"]
+        var delegate: AMZNAuthorizeUserDelegate = AMZNAuthorizeUserDelegate()
+        AIMobileLib.authorizeUserForScopes(requestScopes, delegate: delegate)
         
     }
 
+}
+
+
+class AMZNAuthorizeUserDelegate: NSObject, AIAuthenticationDelegate {
+
+    func requestDidSucceed(apiResult: APIResult!) {
+        print("succeed")
+    }
+    
+    func requestDidFail(errorResponse: APIError!) {
+        print("fail")
+    }
+    
 }
 
 

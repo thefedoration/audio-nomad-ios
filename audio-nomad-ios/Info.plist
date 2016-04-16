@@ -2,6 +2,32 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSExceptionDomains</key>
+		<dict>
+			<key>api.amazon.com</key>
+			<dict>
+				<key>NSExceptionRequiresForwardedSecrecy</key>
+				<false/>
+			</dict>
+		</dict>
+	</dict>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>amzn-thefedoration.audio-nomad-ios</string>
+			</array>
+			<key>CFBundleURLName</key>
+			<string>thefedoration.audio-nomad-ios</string>
+		</dict>
+	</array>
+	<key>LSApplicationCategoryType</key>
+	<string></string>
+	<key>APIKey</key>
+	<string>eyJhbGciOiJSU0EtU0hBMjU2IiwidmVyIjoiMSJ9.eyJ2ZXIiOiIzIiwiZW5kcG9pbnRzIjp7ImF1dGh6IjoiaHR0cHM6Ly93d3cuYW1hem9uLmNvbS9hcC9vYSIsInRva2VuRXhjaGFuZ2UiOiJodHRwczovL2FwaS5hbWF6b24uY29tL2F1dGgvbzIvdG9rZW4ifSwiY2xpZW50SWQiOiJhbXpuMS5hcHBsaWNhdGlvbi1vYTItY2xpZW50LjMwZmZkOWRhMzY1MDQ5NjU4YjYxMmEzZmNhMWUxMDM2IiwiYXBwRmFtaWx5SWQiOiJhbXpuMS5hcHBsaWNhdGlvbi45ZWZiNGRmOTEzNzg0ZGJlOGY0YWYzODkxNzE1N2VhMyIsImJ1bmRsZVNlZWRJZCI6InRoZWZlZG9yYXRpb24uYXVkaW8tbm9tYWQtaW9zIiwiYnVuZGxlSWQiOiJ0aGVmZWRvcmF0aW9uLmF1ZGlvLW5vbWFkLWlvcyIsImlzcyI6IkFtYXpvbiIsInR5cGUiOiJBUElLZXkiLCJhcHBWYXJpYW50SWQiOiJhbXpuMS5hcHBsaWNhdGlvbi1jbGllbnQuMzA4MGUyNmIwNDg2NDViMTljMTc1YjdjYmJiODVlMTAiLCJ0cnVzdFBvb2wiOm51bGwsImFwcElkIjoiYW16bjEuYXBwbGljYXRpb24tY2xpZW50LjMwODBlMjZiMDQ4NjQ1YjE5YzE3NWI3Y2JiYjg1ZTEwIiwiaWQiOiI1ZWVhNzVjZC0wM2ZhLTExZTYtYWRmMC1hOTYzMjU3MTg4NjkiLCJpYXQiOiIxNDYwODI4NDU1MDU3In0=.XM7O/GX7lrfWDHHcCAVaWwguTPRYwNkjE1GBHl+WiK6e5TaUHddrfeAhG8zxsYwlkJ6/SeSzscBfDMy0yU6zwIyCz3x7UGyFGs5+al4v+QFdc7T+L7jHTNkyt4bRHdl/pXPSW6IepICX2rwUxVdlZ3Am47OEnnFTdOUYC2RwoE3M4xPQtRm7ZUASYrLUJIacA1u4zt44rlQFyGTwTjj3v53XIAKJKgYkWbikgfeMBWVAQkwx73cEHn+4IFq3NkT22OTCu0iMWgiA8pRislbmLH7jx24k0Nidi76mRSLoQkOxsaeg4bwWD15SkhhP+tYk5sO0F9ygkNMqrzuft3x4Wg==</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
