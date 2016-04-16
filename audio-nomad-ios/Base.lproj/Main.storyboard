@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -213,7 +214,7 @@
                                 <rect key="frame" x="20" y="74" width="560" height="66"/>
                                 <string key="text">Upload a picture of the text that you want to jump to in Audible. For best results, capture a 10 word by 10 line chunk of the page.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -257,6 +258,82 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Poz-ck-ctU" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="410" y="331"/>
+        </scene>
+        <!--Book Detail View Controller-->
+        <scene sceneID="WF9-fV-wXJ">
+            <objects>
+                <viewController id="52t-mi-gl0" customClass="BookDetailViewController" customModule="audio_nomad_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tIi-lG-MLH"/>
+                        <viewControllerLayoutGuide type="bottom" id="FU7-VT-85m"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RIl-lz-eqe">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KcC-Ob-mVz">
+                                <rect key="frame" x="20" y="28" width="560" height="33"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kEU-hu-Cc3">
+                                <rect key="frame" x="20" y="61" width="560" height="23"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yve-6T-l5W">
+                                <rect key="frame" x="150" y="115" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="EWr-ng-s3y"/>
+                                    <constraint firstAttribute="width" secondItem="yve-6T-l5W" secondAttribute="height" multiplier="1:1" id="QEE-7r-iyQ"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Narrator" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ke9-gD-qCy">
+                                <rect key="frame" x="20" y="84" width="560" height="23"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ke9-gD-qCy" firstAttribute="width" secondItem="kEU-hu-Cc3" secondAttribute="width" id="91z-nI-7Aw"/>
+                            <constraint firstItem="ke9-gD-qCy" firstAttribute="centerX" secondItem="kEU-hu-Cc3" secondAttribute="centerX" id="CmM-BV-k4U"/>
+                            <constraint firstItem="yve-6T-l5W" firstAttribute="centerX" secondItem="KcC-Ob-mVz" secondAttribute="centerX" id="Dr3-4l-yRU"/>
+                            <constraint firstItem="KcC-Ob-mVz" firstAttribute="leading" secondItem="RIl-lz-eqe" secondAttribute="leadingMargin" id="GNq-1o-NPj"/>
+                            <constraint firstItem="ke9-gD-qCy" firstAttribute="top" secondItem="kEU-hu-Cc3" secondAttribute="bottom" id="Ide-VN-lP8"/>
+                            <constraint firstItem="yve-6T-l5W" firstAttribute="top" secondItem="ke9-gD-qCy" secondAttribute="bottom" constant="8" symbolic="YES" id="O91-EO-ZgJ"/>
+                            <constraint firstItem="kEU-hu-Cc3" firstAttribute="top" secondItem="KcC-Ob-mVz" secondAttribute="bottom" id="Pww-7i-LkH"/>
+                            <constraint firstItem="KcC-Ob-mVz" firstAttribute="top" secondItem="tIi-lG-MLH" secondAttribute="bottom" constant="8" symbolic="YES" id="Su3-fN-SrM"/>
+                            <constraint firstItem="kEU-hu-Cc3" firstAttribute="width" secondItem="KcC-Ob-mVz" secondAttribute="width" id="WBM-JT-Ode"/>
+                            <constraint firstItem="yve-6T-l5W" firstAttribute="top" secondItem="KcC-Ob-mVz" secondAttribute="bottom" constant="8" symbolic="YES" id="Z1d-DO-B9a"/>
+                            <constraint firstItem="kEU-hu-Cc3" firstAttribute="centerX" secondItem="KcC-Ob-mVz" secondAttribute="centerX" id="jTA-95-JRa"/>
+                            <constraint firstItem="yve-6T-l5W" firstAttribute="top" secondItem="KcC-Ob-mVz" secondAttribute="top" id="oRU-wh-ZIG"/>
+                            <constraint firstItem="yve-6T-l5W" firstAttribute="top" secondItem="kEU-hu-Cc3" secondAttribute="bottom" constant="8" symbolic="YES" id="svx-0y-6xX"/>
+                            <constraint firstItem="yve-6T-l5W" firstAttribute="centerY" secondItem="KcC-Ob-mVz" secondAttribute="centerY" id="syc-c6-2dJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="KcC-Ob-mVz" secondAttribute="trailing" id="wql-bF-qF3"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Z1d-DO-B9a"/>
+                                <exclude reference="oRU-wh-ZIG"/>
+                                <exclude reference="svx-0y-6xX"/>
+                                <exclude reference="syc-c6-2dJ"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="authorLabel" destination="kEU-hu-Cc3" id="Y9Z-iy-ZOH"/>
+                        <outlet property="coverImageView" destination="yve-6T-l5W" id="lUd-uS-xF9"/>
+                        <outlet property="narratorLabel" destination="ke9-gD-qCy" id="p4b-lc-Fin"/>
+                        <outlet property="titleLabel" destination="KcC-Ob-mVz" id="UJf-kT-VxY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yQL-z8-54d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="410" y="1002"/>
         </scene>
     </scenes>
     <resources>
