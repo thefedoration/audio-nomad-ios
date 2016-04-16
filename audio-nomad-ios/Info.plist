@@ -4,16 +4,18 @@
 <dict>
 	<key>NSAppTransportSecurity</key>
 	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
 		<key>NSExceptionDomains</key>
 		<dict>
 			<key>api.amazon.com</key>
 			<dict>
 				<key>NSExceptionRequiresForwardedSecrecy</key>
 				<false/>
+                <key>NSIncludesSubdomains</key>
+                <true/>
 			</dict>
 		</dict>
-        <key>NSAllowsArbitraryLoads</key>
-        <true/>
 	</dict>
 	<key>CFBundleURLTypes</key>
 	<array>
