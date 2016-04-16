@@ -42,8 +42,8 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yRu-Yc-b9x">
-                                <rect key="frame" x="235" y="285" width="160" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yRu-Yc-b9x">
+                                <rect key="frame" x="70" y="285" width="460" height="30"/>
                                 <state key="normal" title="Find an audio book"/>
                                 <connections>
                                     <segue destination="5rb-sq-aOn" kind="push" identifier="goToUploadPhotoScreen" id="9v3-i0-ZeW"/>
@@ -52,12 +52,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="yRu-Yc-b9x" secondAttribute="trailing" constant="50" id="8o8-iA-b4S"/>
                             <constraint firstItem="yRu-Yc-b9x" firstAttribute="top" secondItem="jxQ-5Y-cSn" secondAttribute="bottom" constant="10" id="AeV-mV-QK5"/>
                             <constraint firstItem="jxQ-5Y-cSn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EpB-jI-ObF"/>
                             <constraint firstItem="yRu-Yc-b9x" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MTG-PS-x1Q"/>
                             <constraint firstAttribute="trailingMargin" secondItem="jxQ-5Y-cSn" secondAttribute="trailing" constant="20" id="MYK-oo-DQP"/>
                             <constraint firstItem="yRu-Yc-b9x" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="NfM-Fl-BDZ"/>
                             <constraint firstItem="jxQ-5Y-cSn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="gIV-NR-0Qa"/>
+                            <constraint firstItem="yRu-Yc-b9x" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="50" id="pV4-w2-SPo"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Audible Nomad" id="2MN-kt-QXr">
