@@ -61,4 +61,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
     }
     
+    
+    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
+        // Pass on the url to the SDK to parse authorization code from the url.
+        var isValidRedirectSignInURL: Bool = AIMobileLib.handleOpenURL(url, sourceApplication: sourceApplication)
+        if !isValidRedirectSignInURL {
+            return false
+        }
+        // App may also want to handle url
+        return true
+    }
+    
 }

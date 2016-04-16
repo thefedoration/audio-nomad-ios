@@ -51,27 +51,21 @@ class MainViewController: UIViewController, UINavigationControllerDelegate {
     
     @IBAction func onLoginButtonClicked(sender: AnyObject) {
         
+        // Make authorize call to SDK to get secure access token for the user.
+        // While making the first call you can specify the minimum basic
+        // scopes needed.
         // Requesting both scopes for the current user.
-        var requestScopes: [AnyObject] = ["profile", "postal_code"]
-        var delegate: AMZNAuthorizeUserDelegate = AMZNAuthorizeUserDelegate()
+        let requestScopes: [AnyObject] = ["profile", "postal_code"]
+        let delegate: AMZNAuthorizeUserDelegate = AMZNAuthorizeUserDelegate()
         AIMobileLib.authorizeUserForScopes(requestScopes, delegate: delegate)
-        
-    }
-
-}
-
-
-class AMZNAuthorizeUserDelegate: NSObject, AIAuthenticationDelegate {
-
-    func requestDidSucceed(apiResult: APIResult!) {
-        print("succeed")
     }
     
-    func requestDidFail(errorResponse: APIError!) {
-        print("fail")
+    @IBAction func logoutButtonClicked(sender: AnyObject) {
+        var delegate: AMZNLogoutDelegate = AMZNLogoutDelegate()
+        AIMobileLib.clearAuthorizationState(delegate)
     }
     
-}
 
+}
 
 

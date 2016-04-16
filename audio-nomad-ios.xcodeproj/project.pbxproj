@@ -26,6 +26,7 @@
 		B9A554721CC2B25C005FF6B0 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9A554711CC2B25C005FF6B0 /* Security.framework */; };
 		B9A554741CC2B261005FF6B0 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9A554731CC2B261005FF6B0 /* SafariServices.framework */; };
 		B9A554761CC2B268005FF6B0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9A554751CC2B268005FF6B0 /* CoreGraphics.framework */; };
+		B9A554781CC2C39F005FF6B0 /* AmazonDelegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A554771CC2C39F005FF6B0 /* AmazonDelegates.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 		B9A554711CC2B25C005FF6B0 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		B9A554731CC2B261005FF6B0 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
 		B9A554751CC2B268005FF6B0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		B9A554771CC2C39F005FF6B0 /* AmazonDelegates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AmazonDelegates.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,7 @@
 		B9A5544B1CC1D17F005FF6B0 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				B9A554771CC2C39F005FF6B0 /* AmazonDelegates.swift */,
 				B9A5544C1CC1D190005FF6B0 /* MainViewController.swift */,
 				B9A554661CC1EAB6005FF6B0 /* ImageProcessorViewController.swift */,
 			);
@@ -249,6 +252,7 @@
 				B9A5544D1CC1D190005FF6B0 /* MainViewController.swift in Sources */,
 				B9A554601CC1E2EC005FF6B0 /* Settings.swift in Sources */,
 				B9A554361CC1CCDD005FF6B0 /* AppDelegate.swift in Sources */,
+				B9A554781CC2C39F005FF6B0 /* AmazonDelegates.swift in Sources */,
 				B9A5546C1CC28FCE005FF6B0 /* FontAwesome.swift in Sources */,
 				B9A554671CC1EAB6005FF6B0 /* ImageProcessorViewController.swift in Sources */,
 			);
