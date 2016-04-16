@@ -12,12 +12,16 @@ class MainViewController: UIViewController, UINavigationControllerDelegate {
     
     // MARK: - Variables
     
+    @IBOutlet weak var actionButton: UIButton!
+    @IBOutlet weak var infoLabel: UILabel!
     // MARK: - Initializers
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         self.styleScreen()
+        
+        self.infoLabel.text = "Welcome \(User.name!)! Press the button below to upload a picture of your book."
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,6 +40,12 @@ class MainViewController: UIViewController, UINavigationControllerDelegate {
         ]
         UIBarButtonItem.appearance().setTitleTextAttributes([NSFontAttributeName: UIFont.systemFontOfSize(13.0)], forState: UIControlState.Normal)
 
+        for button in [actionButton]{
+            button.backgroundColor = Settings.PrimaryAccentColor
+            button.tintColor = Settings.PrimaryTextColor
+            button.layer.cornerRadius = 2
+            button.clipsToBounds = true
+        }
     }
     
     // MARK: - Methods
