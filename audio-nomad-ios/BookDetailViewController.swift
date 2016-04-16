@@ -16,9 +16,17 @@ class BookDetailViewController: UIViewController {
     @IBOutlet weak var authorLabel: UILabel!
     @IBOutlet weak var narratorLabel: UILabel!
     @IBOutlet weak var coverImageView: UIImageView!
+    @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var audibleButton: UIButton! {
+        didSet {
+            audibleButton.backgroundColor = Settings.PrimaryAccentColor
+            audibleButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
+        }
+    }
     
     // MARK: - Variables
     var ASIN = "B00KTEH7WQ"
+    var startTime = 0.0
     var user = User.user_id
     
     override func viewDidLoad() {
@@ -28,6 +36,10 @@ class BookDetailViewController: UIViewController {
         styleScreen()
         loadBookData()
         loadPersonalBookData()
+        
+        var startSec = Int(startTime / 1000)
+        let startMin = Int(startSec / 60)
+        timeLabel.text = "You are at \(startMin) minutes in"
     }
     
     private func styleScreen(){
@@ -35,7 +47,7 @@ class BookDetailViewController: UIViewController {
         self.titleLabel.textColor = Settings.PrimaryTextColor
         self.authorLabel.textColor = Settings.PrimaryTextColor
         self.narratorLabel.textColor = Settings.PrimaryTextColor
-//        self.titleLabel.textColor = Settings.PrimaryTextColor
+        self.timeLabel.textColor = Settings.PrimaryTextColor
     }
     
     private func loadBookData() {

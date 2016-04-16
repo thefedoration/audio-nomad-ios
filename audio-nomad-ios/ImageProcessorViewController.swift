@@ -15,6 +15,7 @@ class ImageProcessorViewController: UIViewController, UINavigationControllerDele
     var sliderValue = 50
     var processingTime = 60.0
     private var ASIN = "B005FRGT44"
+    private var startTime = 0.0
     
     // MARK: - Outlets
     @IBOutlet weak var imageContainerView: UIView!
@@ -162,6 +163,7 @@ class ImageProcessorViewController: UIViewController, UINavigationControllerDele
             if response.result.isSuccess {
                 if let data = response.result.value as? [String: AnyObject] {
                     self.ASIN = data["ASIN"] as! String
+                    self.startTime = data["start_milliseconds"] as! Double
                     self.performSegueWithIdentifier("BookDetailSegue", sender: self)
                 }
             } else {
@@ -237,6 +239,7 @@ class ImageProcessorViewController: UIViewController, UINavigationControllerDele
             case "BookDetailSegue":
                 let dvc = segue.destinationViewController as! BookDetailViewController
                 dvc.ASIN = self.ASIN
+                dvc.startTime = self.startTime
             default:
                 assertionFailure("Prepare for segue fell through")
             }
